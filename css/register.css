@@ -1,0 +1,115 @@
+body {
+  background: rgba(30,139,195, 0.7);
+  font-family: 'Helvetica Neue Thin';
+}
+.registration_box {
+  background: url('../images/bg.png') no-repeat center;
+  background-color: #fff;
+  border-radius: 3px;
+  height: 380px;
+}
+
+.registration_box_logo {
+  width: 200px;
+  margin-top: 20px;
+}
+
+.sign_up_notice {
+  color: #333333;
+}
+
+.sign_up_notice > strong {
+  font-size: 24px;
+}
+
+.email-signup {
+  float: left;
+  width: 100%;
+  height:auto;
+  margin-top: 20px;
+  text-align:center;
+}
+.u-form-group {
+  width:100%;
+  margin-bottom: 10px;
+  display: inline-flex;
+  position: relative;
+}
+
+.u-form-group input[type="text"] {
+  width: calc(50% - 22px);
+  height: 40px;
+  border: 1px solid #777;
+  padding: 0 10px;
+  border-radius: 25px;
+  color: #333;
+}
+
+.u-form-group select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #777;
+  padding: 0 10px;
+  border-radius: 25px;
+  color: #333;
+  margin-left: 20px;
+}
+
+select.user_gender {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    height: 40px;
+}
+
+div.styled-select::after {
+    content: url('../images/down_arrow.png') no-repeat;
+    font-size: 15px;
+    width: calc(40% - 50px);
+    position: absolute;
+    top: 12px;
+    height: 40px;
+}
+
+.u-form-group input[type="email"],
+.u-form-group input[type="password"] {
+  width: calc(100% - 44px);
+  height: 40px;
+  border: 1px solid #777;
+  padding: 0 10px;
+  border-radius: 25px;
+  color: #333;
+}
+
+.user_full_name input:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right:0;
+}
+.user_full_name input:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.user_name input:first-child {
+  width: calc(60% - 22px);
+}
+select.user_gender {
+  border-radius: 25px;
+}
+
+.u-form-group input:focus, .u-form-group select:focus{
+  border-color: #358efb;
+  outline: none;
+}
+.u-form-group button{
+  width: calc(100% - 44px);
+  height: 40px;
+  background-color: #A4DE07;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
