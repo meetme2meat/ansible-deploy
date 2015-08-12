@@ -6,7 +6,6 @@ body {
   background: url('../assets/bg.png') no-repeat center;
   background-color: #fff;
   border-radius: 3px;
-  height: 400px;
 }
 
 .registration_box_logo {
@@ -28,35 +27,37 @@ body {
 }
 
 form.new_user {
+  display: inline-table;
   margin-top: 20px;
   text-align:center;
 }
 .u-form-group {
   width:100%;
   margin-bottom: 10px;
-  display: inline-table;
   position: relative;
 }
 .u-form-group input,.u-form-group select .u-form-group button {
   margin: 0 auto;
 }
 
-.user_full_name input[type="text"] {
-  width: calc(50% - 22px);
-  height: 40px;
-  border: 1px solid #777;
-  padding: 0 10px;
-  border-radius: 25px;
-  color: #333;
+.user_full_name {
+  input[type="text"] {
+    height: 40px;
+    border: 1px solid #777;
+    padding: 0 10px;
+    border-radius: 25px;
+    color: #333;
+  }
 }
 
-.user_name input[type="text"] {
-  width: calc(50% - 22px);
-  height: 40px;
-  border: 1px solid #777;
-  padding: 0 10px;
-  border-radius: 25px;
-  color: #333;
+.user_name {
+  input[type="text"] {
+    height: 40px;
+    border: 1px solid #777;
+    padding: 0 10px;
+    border-radius: 25px;
+    color: #333;
+  }
 }
 
 .u-form-group select {
@@ -95,14 +96,31 @@ div.styled-select::after {
   color: #333;
 }
 
-.user_full_name input:first-child {
+#user_first_name {
+  width: 140px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   margin-right:0;
 }
-.user_full_name input:last-child {
+#user_last_name {
+  width: 140px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.user_full_name {
+  display: inline-flex;
+  width: calc(100% - 44px);
+  .firstName {
+    .error-message {
+      margin: 0 -2px;
+    }
+  }
+  .lastName {
+    .error-message {
+      margin: 0 -2px;
+    } 
+  }
 }
 
 .user_name input:first-child {
@@ -115,7 +133,22 @@ div.styled-select::after {
   border-color: #358efb;
   outline: none;
 }
-.u-form-group button{
+
+.field_with_errors {
+  width: inherit;
+}
+.error-message {
+  float:left;
+  margin-left: 30px;
+}
+
+.new_password {
+  .error-message {
+    margin: 0 20px;
+  }
+}
+
+.u-form-group button {
   width: calc(100% - 44px);
   height: 40px;
   background-color: #A4DE07;
