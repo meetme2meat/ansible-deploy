@@ -3,15 +3,20 @@ body {
   font-family: 'Helvetica Neue Thin';
 }
 .registration_box {
-  background: url('../images/bg.png') no-repeat center;
+  background: url('../assets/bg.png') no-repeat center;
   background-color: #fff;
   border-radius: 3px;
-  height: 380px;
+  height: 400px;
 }
 
 .registration_box_logo {
   width: 200px;
   margin-top: 20px;
+}
+
+.registration_form_container {
+  border-left: 1px solid rgba(0,0,0, 0.25);
+  height: inherit;
 }
 
 .sign_up_notice {
@@ -22,21 +27,30 @@ body {
   font-size: 24px;
 }
 
-.email-signup {
-  float: left;
-  width: 100%;
-  height:auto;
+form.new_user {
   margin-top: 20px;
   text-align:center;
 }
 .u-form-group {
   width:100%;
   margin-bottom: 10px;
-  display: inline-flex;
+  display: inline-table;
   position: relative;
 }
+.u-form-group input,.u-form-group select .u-form-group button {
+  margin: 0 auto;
+}
 
-.u-form-group input[type="text"] {
+.user_full_name input[type="text"] {
+  width: calc(50% - 22px);
+  height: 40px;
+  border: 1px solid #777;
+  padding: 0 10px;
+  border-radius: 25px;
+  color: #333;
+}
+
+.user_name input[type="text"] {
   width: calc(50% - 22px);
   height: 40px;
   border: 1px solid #777;
@@ -46,29 +60,29 @@ body {
 }
 
 .u-form-group select {
-  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 25px;
+  cursor: pointer;
+  height: 40px;
+  min-width: 90px;
   height: 40px;
   border: 1px solid #777;
   padding: 0 10px;
   border-radius: 25px;
   color: #333;
-  margin-left: 20px;
-}
-
-select.user_gender {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    cursor: pointer;
-    height: 40px;
 }
 
 div.styled-select::after {
-    content: url('../images/down_arrow.png') no-repeat;
-    font-size: 15px;
-    width: calc(40% - 50px);
+    content: url('../assets/down_arrow.png') no-repeat;
+    opacity: 0.7;
     position: absolute;
     top: 12px;
-    height: 40px;
+    width: 5px;
+    right: 45px;
+    height: 0;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .u-form-group input[type="email"],
@@ -93,9 +107,8 @@ div.styled-select::after {
 
 .user_name input:first-child {
   width: calc(60% - 22px);
-}
-select.user_gender {
-  border-radius: 25px;
+  float: left;
+  margin-left: 23px;
 }
 
 .u-form-group input:focus, .u-form-group select:focus{
@@ -110,6 +123,11 @@ select.user_gender {
   border-radius: 25px;
   color: #fff;
   font-size: 14px;
-  font-weight: normal;
   text-transform: uppercase;
+}
+
+.terms_and_conditions {
+  width: calc(100% - 44px);
+  display: inline-block;
+
 }
