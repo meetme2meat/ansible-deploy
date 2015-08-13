@@ -11,8 +11,7 @@
  * file per style scope.
  *
  *= require bootstrap.min
- *= require register
- *= require screen
+ *= require users
  *= require_tree .
  *= require_self
  */
