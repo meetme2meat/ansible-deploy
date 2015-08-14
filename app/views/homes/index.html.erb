@@ -31,6 +31,7 @@
             <%else%>
               <li><%= link_to "Log in" , new_user_session_path %></li>
             <%end%>
+            <li><button class="btn btn-primary text-uppercase" id="user_signup_button">Sign Up</button></li> 
           </ul>
         </div>
       </ul>
@@ -164,34 +165,11 @@
     <a href=""><img src="assets/googleplus.png" alt="googleplus"></a>
     <a href=""><img src="assets/youtube.png" alt="youtube"></a>
   </div>
+</footer>
 
-<div class="modal fade" id="login_modal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render partial: "homes/main_modal"%>
+
 
 
 <script type="text/javascript">
-	$(document).ready(function($) {
-    $('#slideshow').carousel({
-      interval: 5000
-    }); 
-
-    $("#user_login_button").on('click', function() {
-      $('#login_modal').modal('show');
-    });
-	});
 </script>
