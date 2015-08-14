@@ -1,3 +1,423 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.text-tiny {
+  font-size: 14px;
+}
+
+.text-light {
+  color: #666666;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.navbar-nav {
+  margin-top: 30px;
+}
+
+.navbar-brand {
+  margin-left: 150px;
+  margin-right: 40px;
+}
+
+ul li{
+  display: inline-flex;
+}
+
+ul li:last-child {
+  width: 300px;
+}
+
+.navbar .btn-primary {
+  margin: 7px;
+  background: #451800;
+  border-radius: 25px;
+  width: 100px;
+  float: right;
+}
+
+ul li a {
+  color: #451800;
+  font-size: 18px;
+  vertical-align: bottom;
+}
+ul li a:hover {
+  text-decoration: none;  
+}
+
+/* Carousel style  -- START */
+
+.carousel {
+  position: relative;
+  height: 150px;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner > .item {
+  position: relative;
+  display: none;
+  height: 150px;
+  background-color: #777;
+  -webkit-transition: .6s ease-in-out left;
+  -o-transition: .6s ease-in-out left;
+  transition: .6s ease-in-out left;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  line-height: 1;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 150px;
+}
+
+.carousel-img-1 {
+  background: url('assets/carousel-img-1.png');
+}
+
+.carousel-img-2 {
+  background: url('assets/carousel-img-2.png');
+}
+
+.carousel-img-3 {
+  background: url('assets/carousel-img-3.png');
+}
+
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+
+.carousel-inner > .active {
+  left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.carousel-inner > .next {
+  left: 100%;
+}
+
+.carousel-inner > .prev {
+  left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  left: 0;
+}
+
+.carousel-inner > .active.left {
+  left: -100%;
+}
+
+.carousel-inner > .active.right {
+  left: 100%;
+}
+
+.controlsBlock {
+  position: absolute;
+  bottom: 125px;
+  left: 40%;
+  display: block;
+  width: 177px;
+  margin: 0 auto;
+  z-index: 1;
+  height: 24px;
+  text-align: center;
+}
+
+.controls {
+  position: relative;
+  display: block;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 25.5px;
+  bottom: 0;
+  left: 0;
+  background: #000000;
+  font-size: 5px;
+  background: none !important;
+  color: #000 !important;
+  text-align: center;
+}
+
+.carousel-control i {
+  font-size: 20px;
+}
+
+.carousel-control.left {
+  left: 0;
+}
+
+.carousel-control.right {
+  right: 0;
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #000;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  position: absolute;
+  z-index: 5;
+  display: inline-block;
+}
+
+.carousel-control .glyphicon-chevron-left {
+  left: 0;
+}
+
+.carousel-control .glyphicon-chevron-right {
+  right: 0;
+}
+
+.carousel-indicators {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  top: 10px;
+  padding-left: 0;
+  margin-left: -30%;
+  text-align: center;
+  list-style: none;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  zoom: 1;
+  width: 10px;
+  height: 10px;
+  margin: 0 2px;
+  background: transparent;
+  border-radius: 25px;  
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border: 1px solid #A4DE07;
+  cursor: pointer;
+}
+
+.carousel-indicators .active {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  background-color: #A4DE07;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.carousel-caption .btn {
+  text-shadow: none;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel {
+    height: 500px;
+  }
+  .carousel-inner > .item {
+    height: 500px;
+  }
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    height: 500px;
+  }
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right {
+    font-size: 15px;
+  }
+  .carousel-caption {
+    right: 20%;
+    left: 20%;
+    padding-bottom: 30px;
+  }
+  .carousel-indicators {
+    bottom: .0;
+  }
+}
+
+/* Carousel Style -- END */
+
+
+/* Search box Style -- START */
+
+#search_recipe {
+  display: inline;
+}
+.search-box {
+  border: none;
+  position: relative;
+  z-index: 1;
+  height: 100px;
+  background: rgba(0,0,0, 0.25);
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.search-box input {
+  vertical-align: middle;
+  height: 40px;
+}
+.form-group:first-child input{
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;  
+  -webkit-border-top-left-radius: 25px;
+  -moz-border-bottom-left-radius: 25px;  
+  -webkit-border-top-left-radius: 25px;
+  -moz-border-bottom-left-radius: 25px;
+  width: 400px;
+}
+
+.search-button {
+  background: #A4DE07;
+  height: 40px;
+  color:white;
+  border:0 none;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;  
+  -webkit-border-top-right-radius: 25px;
+  -moz-border-bottom-right-radius: 25px;  
+  -webkit-border-top-right-radius: 25px;
+  -moz-border-bottom-right-radius: 25px;
+
+}
+
+/* Search box Style -- END */
+
+
+/* Popular Articles Style-- START */
+.popular_articles {
+  max-width: 750px;
+}
+.popular_heading {
+  font-weight: 700;
+}
+.popular_small {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular_small img {
+  width: 225px;
+  height: 225px;
+}
+
+.popular_large {
+  margin: 20px 0 50px 0;
+  width: 100%;
+}
+
+.popular_large img {
+  width: inherit;
+}
+
+/* Popular Articles Style-- END */
+
+/* Upcoming event Style-- START */
+
+.upcoming_event {
+  display: flex;
+  justify-content: space-around;
+  padding: 75px 0;
+  width: 100%;
+  background: rgb(208,197,191);
+}
+
+.upcoming_event_box {
+  max-width: 750px;
+}
+
+.upcoming_event_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upcoming_event_content img {
+  height: 300px;
+}
+
+/* Upcoming event Style-- END */
+
+
+
+
+/* Food News Style-- START */
+.news_snippets {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.news_snippets > div {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  height: 225px;
+}
+.news_snippets article {
+  font-size: 16px;
+}
+/* Food News Style-- END */
+
+
+/* Footer style -- START */
+.footer { 
+  width: 100%;
+  background-color: rgb(58,58,58);
+  background: rgb(58,58,58) url('../images/bg_footer.png');
+  height: 200px;
+  padding-bottom: 40px;
+}
+.footer_text {
+  color: #A4DE07;
+  font-size: 20px;
+  height: 40px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.footer_links {
+  padding-top: 40px;
+}
+
+.footer_links {
+  margin: 0 auto;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+.footer_links img {
+  width: 40px;
+  height: 40px;
+}
+/* Footer style -- END */
