@@ -80,19 +80,6 @@ ul li a:hover {
   height: 150px;
 }
 
-.carousel-img-1 {
-  background: url('carousel-img-1.png');
-}
-
-.carousel-img-2 {
-  background: url('carousel-img-2.png');
-}
-
-.carousel-img-3 {
-  background: url('carousel-img-3.png');
-}
-
-
 .carousel-inner > .active,
 .carousel-inner > .next,
 .carousel-inner > .prev {
@@ -133,7 +120,7 @@ ul li a:hover {
 
 .controlsBlock {
   position: absolute;
-  bottom: 125px;
+  bottom: 25px;
   left: 40%;
   display: block;
   width: 177px;
@@ -267,54 +254,7 @@ ul li a:hover {
     bottom: .0;
   }
 }
-
 /* Carousel Style -- END */
-
-
-/* Search box Style -- START */
-
-#search_recipe {
-  display: inline;
-}
-.search-box {
-  border: none;
-  position: relative;
-  z-index: 1;
-  height: 100px;
-  background: rgba(0,0,0, 0.25);
-  padding-top: 30px;
-  display: flex;
-  justify-content: center;
-}
-.search-box input {
-  vertical-align: middle;
-  height: 40px;
-}
-.form-group:first-child input{
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;  
-  -webkit-border-top-left-radius: 25px;
-  -moz-border-bottom-left-radius: 25px;  
-  -webkit-border-top-left-radius: 25px;
-  -moz-border-bottom-left-radius: 25px;
-  width: 400px;
-}
-
-.search-button {
-  background: #A4DE07;
-  height: 40px;
-  color:white;
-  border:0 none;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;  
-  -webkit-border-top-right-radius: 25px;
-  -moz-border-bottom-right-radius: 25px;  
-  -webkit-border-top-right-radius: 25px;
-  -moz-border-bottom-right-radius: 25px;
-
-}
-
-/* Search box Style -- END */
 
 
 /* Popular Articles Style-- START */

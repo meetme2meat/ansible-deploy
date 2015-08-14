@@ -26,7 +26,7 @@
             <li class="about"><a href="#">Recipes</a></li>
             <li class="career"><a href="#">Videos</a></li>
             <li class="contact"><a href="#">Contact Us</a></li>
-            <li><button class="btn btn-primary text-uppercase">Log in</button></li>
+            <li><button class="btn btn-primary text-uppercase" id="user_login_button">Log in</button></li>
           </ul>
         </div>
       </ul>
@@ -39,7 +39,7 @@
     <div id="slideshow" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="item active">
-          <img class="img-responsive carousel-img-1" alt="">
+          <img class="img-responsive carousel-img-1" src="assets/carousel-img-1.png" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1></h1>
@@ -47,18 +47,18 @@
           </div>
         </div><!-- /. Item Active -->
         <div class="item">
-          <img class="img-responsive carousel-img-2" alt="">
+          <img class="img-responsive carousel-img-2" src="assets/carousel-img-2.JPG" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>SlideShow 2</h1>
+              <h1></h1>
             </div>
           </div>
         </div><!-- /. Item -->
         <div class="item">
-          <img class="img-responsive carousel-img-3" alt="">
+          <img class="img-responsive carousel-img-3" src="assets/carousel-img-3.JPG" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>SlideShow 3</h1>
+              <h1></h1>
             </div>
           </div>
         </div><!-- /. Item -->
@@ -76,29 +76,6 @@
   </div><!-- /. Slideshow -->
 </section><!-- /. Container -->
 <div class="clearfix"></div>
-<section class="container-fluid search-box">
-
-  <form id="search_recipe" action="" method="POST" class="form-inline" role="form">
-    <div class="form-group">
-      <label class="sr-only" for="">Search Recipe</label>
-      <input type="text" name="" class="form-control" id="" placeholder="Search recipe by name, main ingredient or dish type"/>
-    </div>
-    <div class="form-group">
-      <label class="sr-only" for="">Cooking Method</label>
-      <input type="text" name="" class="form-control" id="" placeholder="Cooking method"/>
-    </div>
-    <div class="form-group">
-      <label class="sr-only" for="">label</label>
-      <input type="text" name="" class="form-control" id="" placeholder="Course"/>
-    </div>
-    <div class="form-group">
-      <label class="sr-only" for="">label</label>
-      <input type="text" name="" class="form-control" id="" placeholder="Cuisine"/>
-    </div>            
-
-    <button type="submit" class="btn btn-primary search-button">Submit</button>
-  </form>
-</section>
 
 <section class="container-fluid popular_articles">
   <h2 class="text-center popular_heading">Popular on MiChef</h2>
@@ -184,10 +161,33 @@
     <a href=""><img src="assets/youtube.png" alt="youtube"></a>
   </div>
 
-  <script type="text/javascript">
-  	$(document).ready(function($) {
-      $('#slideshow').carousel({
-        interval: 5000
-      }); 
-  	});
-  </script>
+<div class="modal fade" id="login_modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+	$(document).ready(function($) {
+    $('#slideshow').carousel({
+      interval: 5000
+    }); 
+
+    $("#user_login_button").on('click', function() {
+      $('#login_modal').modal('show');
+    });
+	});
+</script>
