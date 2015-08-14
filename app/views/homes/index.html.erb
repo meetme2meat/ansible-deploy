@@ -1,9 +1,3 @@
- <%if user_signed_in?%>
- <div><%= "Welcome #{current_user.full_name}"%></div>
- <%end%>
-</br>
-<%= link_to "Log Out" , destroy_user_session_path , :method => :delete%>
-
 <header class="topbar">
   <div class="container-fluid">
     <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0;">
@@ -26,7 +20,17 @@
             <li class="about"><a href="#">Recipes</a></li>
             <li class="career"><a href="#">Videos</a></li>
             <li class="contact"><a href="#">Contact Us</a></li>
-            <li><button class="btn btn-primary text-uppercase" id="user_login_button">Log in</button></li>
+            <li><button class="btn btn-primary text-uppercase" id="user_login_button">Log in</button></li>            
+            <%if user_signed_in? %>
+              <li>
+                 <div><%= "Welcome #{current_user.full_name}"%></div>
+              </li>
+              <li>
+                <%= link_to "Log Out" , destroy_user_session_path , :method => :delete%>
+              </li>
+            <%else%>
+              <li><%= link_to "Log in" , new_user_session_path %></li>
+            <%end%>
           </ul>
         </div>
       </ul>
