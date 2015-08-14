@@ -1,0 +1,9 @@
+<% flash.each do |type,value| %>
+  <div class="alert <%= class_for_flash_message(type.to_s) %>" role= "alert" id="flash_message">
+    <strong><%= value %></strong>      
+  </div>
+<%end%>
+
+<script type="text/javascript">
+  $('#flash_message').fadeOut(3000);
+</script>
