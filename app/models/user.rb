@@ -16,6 +16,17 @@ class User < ActiveRecord::Base
     "#{self.first_name} #{self.last_name}"
   end
 
+  def reset_password(user)
+    #use securerandom.hex beacuse password contain numbers and aplphabates
+    generated_password = secure_random_token
+    user.update_attributes(:password => generated_password ,:password_confirmation => generated_password)
+    UserMailer.forgot_password_email(user,generated_password).deliver
+  end
+
+  def secure_random_token
+    SecureRandom.hex(4)
+  end
+  
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
