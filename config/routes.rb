@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users , :controllers => {:registrations => "users/registrations" ,:sessions => "users/sessions"}
+  devise_for :users , :controllers => {:registrations => "users/registrations" ,:sessions => "users/sessions" ,:passwords => "users/passwords"}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,6 +14,12 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :users do    
+    collection do 
+      put 'reset_password'
+      get 'forgot_password'
+    end
+  end
 
   # Example resource route with options:
   #   resources :products do
