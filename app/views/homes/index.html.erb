@@ -23,13 +23,11 @@
             <%if user_signed_in? %>
               <li>
                 <span class="welcome_user_name"><%= "Welcome, #{current_user.full_name}"%></span>
-                <%= link_to "Log Out" , destroy_user_session_path , :method => :delete, :id => "user_login_button" %>
+                <%= link_to "Log Out" , destroy_user_session_path , :method => :delete, :id => "user_logout_button" %>
               </li>
             <%else%>
-              <!-- <li><button class="btn btn-primary text-uppercase" id="user_login_button">Log in</button></li> -->
-              <li><%= link_to "Log in" , new_user_session_path, :id => "user_login_button" %></li>
+              <li><button class="btn btn-primary text-uppercase" id="user_login_button">Log in</button></li> 
             <%end%>
-            <!-- <li><button class="btn btn-primary text-uppercase" id="user_signup_button">Sign Up</button></li>  -->
           </ul>
         </div>
       </ul>
