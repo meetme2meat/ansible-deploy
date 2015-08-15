@@ -17,6 +17,9 @@
 .container-fluid {
   padding: 0;
 }
+.navbar {
+  margin-bottom: 0;
+}
 
 .navbar-nav {
   margin-top: 30px;
@@ -99,6 +102,12 @@ ul li a:hover {
     justify-content: flex-start;
     padding: 10px;
   }
+  .navbar {
+    margin-bottom: 20px;
+  }
+  .navbar-brand {
+    margin-left: 0;
+  }
 }
 
 /* Carousel style  -- START */
@@ -128,6 +137,8 @@ ul li a:hover {
   top: 0;
   left: 0;
   min-width: 100%;
+  min-height: 256px;
+  max-height: 500px;
 }
 
 .carousel-inner > .active,
@@ -171,12 +182,10 @@ ul li a:hover {
 .controlsBlock {
   position: absolute;
   bottom: 25px;
-  left: 40%;
   display: block;
-  width: 177px;
+  width: 100%;
   margin: 0 auto;
   z-index: 1;
-  height: 24px;
   text-align: center;
 }
 
@@ -231,13 +240,8 @@ ul li a:hover {
 
 .carousel-indicators {
   position: relative;
-  bottom: 0;
-  left: 50%;
   z-index: 15;
   width: 60%;
-  top: 10px;
-  padding-left: 0;
-  margin-left: -30%;
   text-align: center;
   list-style: none;
 }
@@ -280,32 +284,7 @@ ul li a:hover {
   text-shadow: none;
 }
 
-@media screen and (min-width: 768px) {
-  .carousel {
-    height: 500px;
-  }
-  .carousel-inner > .item {
-    height: 500px;
-  }
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-    height: 500px;
-  }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right {
-    font-size: 15px;
-  }
-  .carousel-caption {
-    right: 20%;
-    left: 20%;
-    padding-bottom: 30px;
-  }
-  .carousel-indicators {
-    bottom: .0;
-  }
-}
-/* Carousel Style -- END */
-
+/* Carousel style  -- END */
 
 /* Popular Articles Style-- START */
 .popular_articles {
@@ -321,7 +300,7 @@ ul li a:hover {
 
 .popular_small img {
   width: 225px;
-  height: 225px;
+  height: auto;
 }
 
 .popular_large {
@@ -368,9 +347,6 @@ ul li a:hover {
 
 /* Upcoming event Style-- END */
 
-
-
-
 /* Food News Style-- START */
 .news_snippets {
   max-width: 750px;
@@ -385,8 +361,14 @@ ul li a:hover {
 .news_snippets article {
   font-size: 16px;
 }
-/* Food News Style-- END */
 
+@media (max-width: 768px) {
+  .news_snippets > div{
+    height: auto;
+    padding-bottom: 10px;
+  }
+}
+/* Food News Style-- END */
 
 /* Footer style -- START */
 .footer { 
@@ -419,7 +401,6 @@ ul li a:hover {
   height: 40px;
 }
 /* Footer style -- END */
-
 
 /* Modal Window Styles -- START */
 .modal-header, .modal-footer {
