@@ -338,24 +338,32 @@ ul li a:hover {
 /* Upcoming event Style-- START */
 
 .upcoming_event {
-  display: flex;
-  justify-content: space-around;
   padding: 75px 0;
   width: 100%;
   background: rgb(208,197,191);
-}
-
-.upcoming_event_box {
-  max-width: 750px;
+  overflow: auto;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .upcoming_event_content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.upcoming_event_content img {
-  height: 300px;
+.upcoming_event_content div {
+  padding: 0 15px;
+  float: left;
+  img {
+    height: 300px
+  }
+}
+
+@media (max-width: 768px) {
+  .upcoming_event_content {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 /* Upcoming event Style-- END */
