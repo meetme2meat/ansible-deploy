@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+* {
+  font-family: 'Helvetica Neue';
+}
+
 .text-tiny {
   font-size: 14px;
 }
@@ -23,6 +27,13 @@
   margin-right: 40px;
 }
 
+.navbar-toggle {
+  border: 1px solid #A4DE07;
+  .icon-bar {
+    background-color: #A4DE07;
+  }
+}
+
 .welcome_user_name {
   line-height: 3.5;
 }
@@ -33,7 +44,8 @@ ul li{
 
 ul li:last-child {
   min-width: 300px;
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #user_login_button {
@@ -42,7 +54,7 @@ ul li:last-child {
   background: #451800;
   color: white;
   height: 40px;
-  margin: 7px;
+  margin: 5px;
   text-align: center;
   font-size: 15px;
   border-radius: 25px;
@@ -54,7 +66,7 @@ ul li:last-child {
   background: #451800;
   color: white;
   height: 40px;
-  margin: 7px;
+  margin: 5px;
   text-align: center;
   font-size: 15px;
   border-radius: 25px;
@@ -65,6 +77,9 @@ ul li:last-child {
 
 }
 
+ul li {
+  padding: 0 10px;
+}
 
 
 ul li a {
@@ -76,11 +91,20 @@ ul li a:hover {
   text-decoration: none;  
 }
 
+@media (max-width: 768px) {
+  #user_login_button, #user_logout_button {
+    float: left;
+  }
+  ul li:last-child {
+    justify-content: flex-start;
+    padding: 10px;
+  }
+}
+
 /* Carousel style  -- START */
 
 .carousel {
   position: relative;
-  height: 150px;
 }
 
 .carousel-inner {
@@ -92,7 +116,6 @@ ul li a:hover {
 .carousel-inner > .item {
   position: relative;
   display: none;
-  height: 150px;
   background-color: #777;
   -webkit-transition: .6s ease-in-out left;
   -o-transition: .6s ease-in-out left;
@@ -105,7 +128,6 @@ ul li a:hover {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 150px;
 }
 
 .carousel-inner > .active,
