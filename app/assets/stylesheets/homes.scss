@@ -23,21 +23,49 @@
   margin-right: 40px;
 }
 
+.welcome_user_name {
+  line-height: 3.5;
+}
+
 ul li{
   display: inline-flex;
 }
 
 ul li:last-child {
   width: 300px;
+  text-align: right;
 }
 
-.navbar .btn-primary {
-  margin: 7px;
-  background: #451800;
-  border-radius: 25px;
+#user_login_button {
   width: 100px;
+  line-height: 1;
+  background: #451800;
+  color: white;
+  height: 40px;
+  margin: 7px;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 25px;
   float: right;
 }
+#user_logout_button {
+  width: 125px;
+  line-height: 1;
+  background: #451800;
+  color: white;
+  height: 40px;
+  margin: 7px;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 25px;
+  float: right;  
+}
+
+#user_login_button:hover, #user_logout_button:hover {
+
+}
+
+
 
 ul li a {
   color: #451800;
