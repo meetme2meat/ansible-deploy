@@ -4,15 +4,26 @@
   	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/>
+    
+    <%= favicon_link_tag 'favicon.ico' %>
   	<title>Michef</title>
       
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
     <%= render partial: "layouts/partials/flash_messages", flash: flash%>
     <%= yield %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+
+      });
+    </script>
+
+    <%= yield(:endjs) %>
+
   </body>
 </html>
