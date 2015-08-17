@@ -40,7 +40,9 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   #config mailcatcher for development enviroment
-  config.action_mailer.delivery_method = :smtp
-
-  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: 'key-acf12bb92978febc727e783c58dbf69b  ',
+    domain: 'sandbox5bd26506c23d4faf9e94991f0c0ecf27.mailgun.org'
+  }
 end
