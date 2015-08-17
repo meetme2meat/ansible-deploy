@@ -1,20 +1,15 @@
-<%= render partial: "layouts/partials/header"%>
-<%= render partial: "homes/carousel_container"%>
-<div class="clearfix"></div>
 
+<%= render partial: "homes/carousel_container"%>
 <%= render partial: "homes/popular_articles"%>
 
 <%= render partial: "homes/upcoming_event"%>
 
-
 <%= render partial: "homes/food_news"%>
 
-
-<%= render partial: "layouts/partials/footer"%>
-
-<%= render partial: "homes/main_modal"%>
-
-
-
-<script type="text/javascript">
-</script>
+<% content_for :endjs do %>
+  <script type="text/javascript">
+    $(document).ready(function () {
+        miObj.homes(<%= raw({:controller => params[:controller], :action => params[:action]}.to_json) %>);
+    });
+  </script>
+<% end %>

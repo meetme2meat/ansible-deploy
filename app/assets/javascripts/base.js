@@ -6,7 +6,9 @@ var Michef = (function () {
     this.params = params || {};
 
     var subApps = {
-      "helper": "Helper"
+      "helper": "Helper",
+      "users": "Users",
+      "homes": "Homes"
     };
 
     /*
@@ -44,8 +46,8 @@ var Michef = (function () {
   };
 
   App.method("init", function () {
-    var self = this;
-  
+      var self = this;
+      miObj.users();
   });
   return App;
 })();
