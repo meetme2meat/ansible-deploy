@@ -13,7 +13,7 @@
         <%= link_to "login" ,new_session_path(@user),id: "log_in" %>    
       </div>
       <div class="registration_form_container col-lg-7 col-md-7 col-sm-7 col-xs-12">
-        <%= form_for(@user, as: @user, class: "email-signup", url: registration_path(@user)) do |f| %>
+        <%= form_for(@user, as: @user,  url: registration_path(@user),html:{class: "email-signup"}) do |f| %>
         <%#= devise_error_messages! %>
         <div class="u-form-group user_full_name">
           <div class="firstName">
