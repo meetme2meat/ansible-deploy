@@ -59,6 +59,11 @@ gem 'mailgun_rails'
 
 group :development do
   gem 'pry'
+  gem 'capistrano'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
 end
 
 group :development, :test do
