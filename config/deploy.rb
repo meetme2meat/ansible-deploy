@@ -29,13 +29,13 @@ lock '3.4.0'
  set :pty, true
 
 # Default value for :linked_files is []
- set :linked_files, fetch(:linked_files, []).push('config/database.yml')
+ set :linked_files, fetch(:linked_files, []).push('config/database.yml' ,'config/secrets.yml')
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
 # Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+ #set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
  set :keep_releases, 5
@@ -61,5 +61,6 @@ namespace :deploy do
       # end
     end
   end
+  after :finishing, 'deploy:cleanup'
   after :finishing,'deploy:restart'
 end

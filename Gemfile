@@ -56,7 +56,7 @@ gem 'devise'
 gem 'mailcatcher'
 
 gem 'mailgun_rails'
-
+gem "config"
 group :development do
   gem 'pry'
   gem 'capistrano'
