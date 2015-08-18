@@ -5,7 +5,8 @@
   </div>
 <div class="modal-body login_box">
     <div class="login_form_container col-lg-7 col-md-7 col-sm-7 col-xs-12">
-      <%= form_for(@user, as: @user, url: session_path(@user),html:{class: "email-signin"}) do |f| %>  
+    <div class="error_message_login text-danger text-center"></div>
+      <%= form_for(@user, as: @user, url: session_path(@user), remote: true, html:{class: "email-signin"}) do |f| %>  
       <div class="l-form-group login_id">
         <%= f.text_field :login ,placeholder:"Username / Email" %>
       </div>
