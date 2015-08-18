@@ -131,6 +131,9 @@ GEM
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
+    passenger (5.0.15)
+      rack
+      rake (>= 0.8.1)
     pg (0.18.2)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -248,6 +251,7 @@ DEPENDENCIES
   mailgun_rails
   momentjs-rails
   mustache-js-rails
+  passenger
   pg
   pry
   rails (= 4.2.0)
