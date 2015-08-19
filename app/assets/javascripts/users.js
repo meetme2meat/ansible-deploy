@@ -18,12 +18,12 @@ var Michef = (function (Michef) {
   		$("#user_login_button").on('click', function() {
   		  $('#main_modal').modal('show');
   		  $('.login_modal').show();
-  		  $('.forgot_password_modal, .signup_modal').hide();
+        $('.forgot_password_modal, .signup_modal').hide();
   		});
   		/*click on forgot password link hide login and signup modal*/
   		$("#forgot_password").on('click',function(){
   		  event.preventDefault();
-  		  $('.login_modal').hide();
+  		  $('.login_modal, .signup_modal').hide();
   		  $('.forgot_password_modal').show();
   		});
   		/*click on sign up link hide login and forgot modal*/
@@ -34,7 +34,7 @@ var Michef = (function (Michef) {
   		  $('.signup_modal').show();
   		});
   		/*click on log in link hide sign up and forgot modal*/
-  		$('#log_in').on('click',function(){
+  		$('.log_in').on('click',function(){
   		  event.preventDefault();
   		  $('.forgot_password_modal, .signup_modal').hide();
   		  $('.login_modal').show();
