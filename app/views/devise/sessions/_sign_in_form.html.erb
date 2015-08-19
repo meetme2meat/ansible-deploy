@@ -9,11 +9,11 @@
     <div class="successfully_registered text-success text-center"></div>
       <%= form_for(@user, as: @user, url: session_path(@user), remote: true, html:{class: "email-signin"}) do |f| %>  
       <div class="l-form-group login_id">
-        <%= f.text_field :login ,placeholder:"Username / Email" %>
+        <%= f.text_field :login ,placeholder:"Username / Email", :required=>true %>
       </div>
 
       <div class="l-form-group">
-        <%= f.password_field :password, autocomplete: "off" ,placeholder:"Password" %>
+        <%= f.password_field :password, autocomplete: "off" ,placeholder:"Password", :required=>true %>
       </div>
       <div class="l-form-group">
         <%= f.submit "Login" ,class: "btn login_button text-capitalize" %>
