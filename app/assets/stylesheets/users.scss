@@ -243,3 +243,55 @@ form.new_user {
   font-size: 25px;
   color: #A4DE07;
 }
+
+
+/* FOrgot Password UI - START*/
+
+.forgot_password_form_container {
+  border-right: 1px solid #333;
+}
+.f-form-group {
+  width: calc(100% - 44px);
+  height: 40px;
+  border: 1px solid #777;
+  border-radius: 25px;
+  padding: 0 10px;
+  border-radius: 25px;
+  color: #333;
+}
+
+.forgot_password_button {
+  width: calc(100% - 44px);
+  height: 40px;
+  color: #A4DE07;
+  background: #FFF;
+  border: 1px solid #A4DE07;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.fp-sign_in {
+  height: 25px;
+  background: white;
+  color: #A4DE07;
+  border: 1px solid #A4DE07;
+  border-radius: 25px;
+  font-size: 12px;
+}
+.fp-sign_in:hover {
+  color: #333;
+}
+.fp-sign_up {
+  height: 30px;
+  color: white;
+  background-color: #A4DE07;
+  border: none;
+  border-radius: 25px;
+  font-size: 13px;
+}
+.fp-sign_up:hover {
+  color: #333;
+}
+// /* FOrgot Password UI - END*/

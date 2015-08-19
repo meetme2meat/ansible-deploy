@@ -10,7 +10,7 @@
           <strong class="text-capitalize">Sign up</strong> to browse or search thousands of recipes, cooking tips, how-to food videos and a lot more. <br /> <br />
           At MiChef you’re sure to find something delicious for every occassion.
         </div>
-        <%= link_to "login" ,new_session_path(@user),id: "log_in" %>    
+        <%= link_to "login" ,new_session_path(@user),class: "log_in" %>    
       </div>
       <div class="registration_form_container col-lg-7 col-md-7 col-sm-7 col-xs-12">
         <%= form_for(@user, as: @user,  url: registration_path(@user), remote: true, html:{class: "email-signup"}) do |f| %>
