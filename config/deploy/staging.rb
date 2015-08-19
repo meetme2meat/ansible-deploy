@@ -35,10 +35,15 @@ set :stage, :staging
   set :repo_url, 'git@github.com:idyllicsoftware/michef.git'
   set :branch, "staging"
   set :rails_env, "staging"
-  set :rvm1_ruby_version, 'ruby-2.1.5@michef'
+  set :rvm_ruby_version, 'ruby-2.1.5@michef'
   set :user, "ubuntu"
   set :deploy_to, '/srv/apps/michef'
-
+  set :bundle_gemfile, -> { release_path.join('Gemfile') }
+  set :bundle_dir, -> { shared_path.join('vendor/bundle') }
+  set :bundle_flags, '--deployment'
+  set :bundle_without, %w{development test}.join(' ')
+  set :bundle_binstubs, -> { shared_path.join('bin') }
+  set :bundle_roles, :all
 
 
 # Custom SSH Options
