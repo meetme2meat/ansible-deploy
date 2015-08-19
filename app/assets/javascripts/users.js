@@ -41,6 +41,8 @@ var Michef = (function (Michef) {
   		});
 
       $('.email-signup').submit(function(e) {
+
+        var signup_form = $('.email-signup');
         e.preventDefault();
         e.stopImmediatePropagation();
 
@@ -48,11 +50,31 @@ var Michef = (function (Michef) {
             url: $(this).attr('action'),
             method: $(this).attr('method'),
             data: $(this).serialize(),
+            dataType: 'json',
             success: function (response) {
-              $('.email-signup').html($(response).find('.email-signup').html());
+              if(response.success == false) {
+                if(response.errors.email) {
+                  signup_form.find('.user_email span.error-message').html(response.errors.email);
+                }
+                if(response.errors.password_confirmation) {
+                  signup_form.find('.confirm_password span.error-message').html(response.errors.password_confirmation);
+                }
+                if(response.errors.password) {
+                  signup_form.find('.new_password span.error-message').html(response.errors.password);
+                }
+                if(response.errors.first_name) {
+                  signup_form.find('.firstName span.error-message').html(response.errors.first_name);
+                }
+                if(response.errors.last_name) {
+                  signup_form.find('.lastName span.error-message').html(response.errors.last_name);
+                }
+                if(response.errors.username) {
+                  signup_form.find('.user_name span.error-message').html(response.errors.username);
+                }
+              }
             },
             error: function () {
-              $('.registration_form_container').html("Error");
+              
             }
          });
         return false;
@@ -66,6 +88,7 @@ var Michef = (function (Michef) {
             url: $(this).attr('action'),
             type: $(this).attr('method'),
             data: $(this).serialize(),
+            dataType: 'json',
             success:function(){
                 location.reload();
             },
