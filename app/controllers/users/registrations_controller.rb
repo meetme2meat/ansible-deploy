@@ -12,7 +12,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.new(user_params)
     if @user.save
       UserMailer.welcome_email(@user).deliver
-      redirect_to root_path, notice: 'Sign up successfully'
+      redirect_to root_path, notice: 'Registration successful'
     else
       render action: 'new' , notice: "#{@user.errors}"
     end

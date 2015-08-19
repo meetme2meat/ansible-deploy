@@ -79,16 +79,12 @@ form.new_user {
   color: #333;
 }
 
-div.styled-select::after {
-    content: url('../assets/down_arrow.png') no-repeat;
-    opacity: 0.7;
-    position: absolute;
-    top: 12px;
-    width: 5px;
-    right: 45px;
-    height: 0;
-    cursor: pointer;
-    z-index: 1;
+.fa-angle-down {
+  position: absolute;
+  right: 35px;
+  top: 10px;
+  font-size: 21px;
+  z-index: 1;
 }
 
 .u-form-group input[type="email"],

@@ -30,7 +30,8 @@
           <%= f.text_field :username ,:placeholder =>"Username"%>
           <span class="error-message text-danger text-vtiny text-left"><%= show_errors(@user, :username) %></span>
           <div class="styled-select">
-            <%= f.select :gender ,[['Male','male'],['Female','female']],class: "user_gender"%>              
+            <%= f.select :gender ,[['Male','male'],['Female','female']],class: "user_gender"%>
+            <i class="fa fa-angle-down"></i>            
           </div>
         </div> 
         <div class="u-form-group">
