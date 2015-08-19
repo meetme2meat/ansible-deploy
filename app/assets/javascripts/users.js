@@ -64,6 +64,9 @@ var Michef = (function (Michef) {
                   $('.signup_modal').hide();
                   $('.login_modal').show();
                   $('.login_modal').find('.successfully_registered').html("Successfully Registered!!");
+                  setTimeout(function() {
+                    $('.successfully_registered').slideUp();
+                  }, 3000);                  
                 }
               },
             error: function() {
@@ -88,11 +91,29 @@ var Michef = (function (Michef) {
             error: function() {
               $('.error_message_login').html('Invalid Username or Password').show();
               setTimeout(function() {
-                $('.error_message_login, .successfully_registered').hide();
+                $('.error_message_login').slideUp();
               }, 3000);
             }
         });
     });
+
+      $('.forgot_password').submit(function(e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
+        $.ajax({
+            url: $(this).attr('action'),
+            type: $(this).attr('method'),
+            data: $(this).serialize(),
+            dataType: 'json',
+            success:function(response){
+              $('.password_requested').html(response.errors);
+            },
+            error: function() {
+
+            }
+        });
+    });      
   });
   return Michef;
 })(Michef);
