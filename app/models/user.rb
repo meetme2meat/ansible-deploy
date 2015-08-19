@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validates :last_name ,presence: true ,length:{maximum: 30}
   validates :username ,presence: true ,length: {maximum: 10} ,uniqueness: true
   #password have only numbers and alphabets
-  validates :password ,format: {with: /\A^[0-9 a-z A-Z]*$\Z/} , length: {minimum: 8,:message => "should contain numbers and alphabets"}
+  validates :password ,format: {with: /\A^[0-9 a-z A-Z]*$\Z/} , length: {minimum: 8,:message => " ,should contain numbers and alphabets"}
   # Virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'
   attr_accessor :login
