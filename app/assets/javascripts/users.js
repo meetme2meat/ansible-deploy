@@ -53,15 +53,17 @@ var Michef = (function (Michef) {
             dataType: 'json',
             success: function (response) {
               if(response.success == false) {
-(response.errors.email) ? signup_form.find('.user_email span.error-message').html(response.errors.email) : signup_form.find('.user_email span.error-message').html('');
-(response.errors.password_confirmation) ? signup_form.find('.confirm_password span.error-message').html(response.errors.password_confirmation) : signup_form.find('.confirm_password span.error-message').html('');
-(response.errors.password) ? signup_form.find('.new_password span.error-message').html(response.errors.password) : signup_form.find('.new_password span.error-message').html('');
-(response.errors.first_name) ? signup_form.find('.firstName span.error-message').html(response.errors.first_name) : signup_form.find('.firstName span.error-message').html('');
-(response.errors.last_name) ? signup_form.find('.lastName span.error-message').html(response.errors.last_name) : signup_form.find('.lastName span.error-message').html('');
-(response.errors.username) ? signup_form.find('.user_name span.error-message').html(response.errors.username) : signup_form.find('.user_name span.error-message').html('');
+                (response.errors.email) ? signup_form.find('.user_email span.error-message').html(response.errors.email) : signup_form.find('.user_email span.error-message').html('');
+                (response.errors.password_confirmation) ? signup_form.find('.confirm_password span.error-message').html(response.errors.password_confirmation) : signup_form.find('.confirm_password span.error-message').html('');
+                (response.errors.password) ? signup_form.find('.new_password span.error-message').html(response.errors.password) : signup_form.find('.new_password span.error-message').html('');
+                (response.errors.first_name) ? signup_form.find('.firstName span.error-message').html(response.errors.first_name) : signup_form.find('.firstName span.error-message').html('');
+                (response.errors.last_name) ? signup_form.find('.lastName span.error-message').html(response.errors.last_name) : signup_form.find('.lastName span.error-message').html('');
+                (response.errors.username) ? signup_form.find('.user_name span.error-message').html(response.errors.username) : signup_form.find('.user_name span.error-message').html('');
                 }
                 else {
-                  console.log ("success");
+                  $('.signup_modal').hide();
+                  $('.login_modal').show();
+                  $('.login_modal').find('.successfully_registered').html("Successfully Registered!!");
                 }
               },
             error: function() {
@@ -86,7 +88,7 @@ var Michef = (function (Michef) {
             error: function() {
               $('.error_message_login').html('Invalid Username or Password').show();
               setTimeout(function() {
-                $('.error_message_login').hide();
+                $('.error_message_login, .successfully_registered').hide();
               }, 3000);
             }
         });
