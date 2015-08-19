@@ -1,22 +1,21 @@
+/* About us page styles - START */
 .about_us_container {
-	background: #ecf0f1;
-	//background-opacity: 0.4;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background: #fff;
 	h3 {
 		color: #A4DE07;
 	}
 	.why_michef div{
-		border: 2px dashed #D2527F;
 		padding-top: 10px;
 	}
 	.who_we_are div {
 		padding-top: 10px;
-		border: 2px dashed #87D37C;
 	}
 }
 
 section.chef div {
 	min-height: 450px;
-	border: 1px dashed #2980b9;
 	padding-top: 10px;
 	h4 {
 		margin-top: 0;
@@ -27,10 +26,11 @@ section.chef div {
 
 section.founder div {
 	min-height: 525px;
-	border: 1px dashed #e74c3c;
 	padding-top: 10px;
 	h4 {
 		margin-top: 0;
 		color: #e74c3c;
 	}
 }
+
+/* About us page styles - END */
