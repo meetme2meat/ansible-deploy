@@ -379,7 +379,7 @@ ul li a:hover {
 .footer { 
   width: 100%;
   background-color: rgb(58,58,58);
-  background: rgb(58,58,58) url('bg_footer.png');
+  background: rgb(58,58,58) url(asset_path('bg_footer.png'));
   height: 200px;
   padding-bottom: 40px;
 }
