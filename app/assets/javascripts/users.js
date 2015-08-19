@@ -110,12 +110,26 @@ var Michef = (function (Michef) {
             data: $(this).serialize(),
             dataType: 'json',
             success:function(response){
-              $('.password_requested_status').html(response.errors);
+              if(response.errors) {
+                $('.password_requested').addClass("text-danger").removeClass("text-success").html(response.errors).slideDown();
+                setTimeout(function() {
+                  $('.password_requested').slideUp();
+                }, 3000);
+              }
+              else {
+                $('.password_requested').addClass("text-success").removeClass("text-danger").html(response.success_message).slideDown();
+                setTimeout(function() {
+                  $('.password_requested').slideUp();
+                  $('.modal').modal('hide');
+                }, 3000);
+              }
             },
             error: function() {
 
             }
         });
+
+
     });      
   });
   return Michef;
