@@ -13,12 +13,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
     respond_to do |format|
       if @user.save
         UserMailer.welcome_email(@user).deliver
+        binding.pry
         format.html { redirect_to root_path, notice: 'User was successfully created.' }
-        format.json {render json: {success: true,  location: @user}  }
+        format.js {render json: {success: true,  location: @user}  }
         #redirect_to root_path, notice: 'Sign up successfully'
       else
         format.html { render action: 'new' }
-        format.json { render json: {success: false , errors: @user.errors} }
+        format.js { render json: {success: false , errors: @user.errors} }
       end
     #super
     end

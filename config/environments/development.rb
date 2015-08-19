@@ -42,7 +42,7 @@ Rails.application.configure do
   #config mailcatcher for development enviroment
   config.action_mailer.delivery_method = :mailgun
   config.action_mailer.mailgun_settings = {
-    api_key: 'key-acf12bb92978febc727e783c58dbf69b  ',
+    api_key: 'key-acf12bb92978febc727e783c58dbf69b',
     domain: 'sandbox5bd26506c23d4faf9e94991f0c0ecf27.mailgun.org'
   }
 end

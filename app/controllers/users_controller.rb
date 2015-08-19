@@ -10,10 +10,10 @@ class UsersController < ApplicationController
         @user.reset_password(@user)
         #redirect_to root_path
         format.html { redirect_to root_path, notice: 'Reset Password.' }
-        format.json { render json: {success: true,  location: @user} }
+        format.js { render json: {success: true,  location: @user} }
       else
         format.html { render :template => 'users/forgot_password.html.erb',:notice => "No Email Associated" }
-        format.json { render json: {success: false, errors:  "No Email Associated"} }
+        format.js { render json: {success: false, errors:  "No Email Associated"} }
         #flash[:notice] = "No Email Associated"
         #render :template => 'users/forgot_password.html.erb'
       end
