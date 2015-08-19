@@ -10,13 +10,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     @user = User.new(user_params)
-    if @user.save
-      UserMailer.welcome_email(@user).deliver
-      redirect_to root_path, notice: 'Registration successful'
-    else
-      render action: 'new' , notice: "#{@user.errors}"
-    end
+    respond_to do |format|
+      if @user.save
+        UserMailer.welcome_email(@user).deliver
+        format.html { redirect_to root_path, notice: 'User was successfully created.' }
+        format.json {render json: {success: true,  location: @user}  }
+        #redirect_to root_path, notice: 'Sign up successfully'
+      else
+        format.html { render action: 'new' }
+        format.json { render json: {success: false , errors: @user.errors} }
+      end
     #super
+    end
   end
 
   # GET /resource/edit
