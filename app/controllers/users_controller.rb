@@ -5,12 +5,18 @@ class UsersController < ApplicationController
 
   def reset_password
     @user = User.find_by(email: params[:email])
-    if @user.present?
-      @user.reset_password(@user)
-      redirect_to root_path
-    else
-      flash[:notice] = "No Email Associated"
-      render :template => 'users/forgot_password.html.erb'
+    respond_to do |format|
+      if @user.present?
+        @user.reset_password(@user)
+        #redirect_to root_path
+        format.html { redirect_to root_path, notice: 'Reset Password.' }
+        format.json { success: true,  location: @user }
+      else
+        format.html { render :template => 'users/forgot_password.html.erb',:notice => "No Email Associated" }
+        format.json { success: false , errors:  "No Email Associated" }
+        #flash[:notice] = "No Email Associated"
+        #render :template => 'users/forgot_password.html.erb'
+      end
     end
   end
 end
