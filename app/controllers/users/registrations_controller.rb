@@ -20,8 +20,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
         format.html { render action: 'new' }
         format.json { success: false , errors: @user.errors }
       end
-    end
     #super
+    end
   end
 
   # GET /resource/edit
