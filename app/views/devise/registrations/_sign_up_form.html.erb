@@ -18,25 +18,25 @@
         <div class="u-form-group user_full_name">
           <div class="firstName">
             <%= f.text_field :first_name ,:placeholder =>"First Name" %>
-            <span class="error-message text-danger text-vtiny text-left"><%= show_errors(@user, :first_name) %></span>
+            <span class="error-message text-danger text-vtiny text-left"></span>
           </div>
           <div class="lastName">
             <%= f.text_field :last_name ,:placeholder =>"Last Name" %>
-            <span class="error-message text-danger text-vtiny text-left"><%= show_errors(@user, :last_name) %></span>
+            <span class="error-message text-danger text-vtiny text-left"></span>
           </div>
         </div>
 
         <div class="u-form-group user_name">
           <%= f.text_field :username ,:placeholder =>"Username"%>
-          <span class="error-message text-danger text-vtiny text-left"><%= show_errors(@user, :username) %></span>
-          <div class="styled-select">
+          <span class="error-message text-danger text-vtiny text-left"></span>
+        </div>
+        <div class="u-form-group user_gender styled-select">
             <%= f.select :gender ,[['Male','male'],['Female','female']],class: "user_gender"%>
-            <i class="fa fa-angle-down"></i>            
-          </div>
-        </div> 
-        <div class="u-form-group">
+            <i class="fa fa-angle-down"></i>
+        </div>
+        <div class="u-form-group user_email">
           <%= f.email_field :email, autofocus: true,:placeholder =>"Email" %>
-          <span class="error-message text-danger text-vtiny text-left"><%= show_errors(@user, :email) %></span>
+          <span class="error-message text-danger text-vtiny text-left"></span>
         </div> 
 
         <div class="u-form-group new_password">
@@ -44,12 +44,12 @@
           <em>(<%= @minimum_password_length %> characters minimum)</em>
           <% end %><br />
           <%= f.password_field :password, autocomplete: "off",:placeholder =>"Password" %>
-          <span class="error-message text-danger text-vtiny text-left"><%= show_errors(@user, :password) %></span>
+          <span class="error-message text-danger text-vtiny text-left"></span>
         </div>
         <div class="u-form-group confirm_password">
           <%= f.password_field :password_confirmation, autocomplete: "off" ,
           :placeholder =>"Retype password"%>
-          <span class="error-message text-danger text-vtiny text-left"><%= show_errors(@user, :password_confirmation) %></span>
+          <span class="error-message text-danger text-vtiny text-left"></span>
         </div> 
         <div class="u-form-group">
           <%= f.submit "Create an account" ,class: "register_button text-capitalize" %>
