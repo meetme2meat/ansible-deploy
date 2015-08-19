@@ -362,8 +362,12 @@ ul li a:hover {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   height: 225px;
+  h3 {
+    color: #451800;
+  }
 }
 .news_snippets article {
+  font-family: 'Helvetica Neue Light';
   font-size: 16px;
 }
 
@@ -404,6 +408,9 @@ ul li a:hover {
 .footer_links img {
   width: 40px;
   height: 40px;
+}
+.footer_links img:hover {
+  transform: scale(1.05);
 }
 /* Footer style -- END */
 

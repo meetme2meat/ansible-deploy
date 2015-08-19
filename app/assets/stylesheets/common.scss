@@ -1,0 +1,36 @@
+/* About us page styles - START */
+.about_us_container {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background: #fff;
+	h3 {
+		color: #A4DE07;
+	}
+	.why_michef div{
+		padding-top: 10px;
+	}
+	.who_we_are div {
+		padding-top: 10px;
+	}
+}
+
+section.chef div {
+	min-height: 450px;
+	padding-top: 10px;
+	h4 {
+		margin-top: 0;
+		color: #2980b9;
+	}
+}
+
+
+section.founder div {
+	min-height: 525px;
+	padding-top: 10px;
+	h4 {
+		margin-top: 0;
+		color: #e74c3c;
+	}
+}
+
+/* About us page styles - END */

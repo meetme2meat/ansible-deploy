@@ -38,6 +38,7 @@ form.new_user {
   margin-bottom: 10px;
   position: relative;
 }
+
 .u-form-group input,.u-form-group select .u-form-group button {
   margin: 0 auto;
 }
@@ -53,8 +54,10 @@ form.new_user {
 }
 
 .user_name {
+  width: 60%;
+  float: left;
+  z-index: 10;
   input[type="text"] {
-    width: calc(60% - 22px);
     height: 40px;
     border: 1px solid #777;
     padding: 0 10px;
@@ -66,6 +69,7 @@ form.new_user {
 }
 
 .u-form-group select {
+  width: 30%;
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: 25px;
@@ -79,7 +83,8 @@ form.new_user {
   color: #333;
 }
 
-div.styled-select::after {
+
+/*div.styled-select::after {
     content: url(asset-path('down_arrow.png')) no-repeat;
     opacity: 0.7;
     position: absolute;
@@ -89,6 +94,13 @@ div.styled-select::after {
     height: 0;
     cursor: pointer;
     z-index: 1;
+}*/
+.fa-angle-down {
+  position: absolute;
+  right: 35px;
+  top: 10px;
+  font-size: 21px;
+  z-index: 1;
 }
 
 .u-form-group input[type="email"],
@@ -247,3 +259,55 @@ div.styled-select::after {
   font-size: 25px;
   color: #A4DE07;
 }
+
+
+/* FOrgot Password UI - START*/
+
+.forgot_password_form_container {
+  border-right: 1px solid #333;
+}
+.f-form-group {
+  width: calc(100% - 44px);
+  height: 40px;
+  border: 1px solid #777;
+  border-radius: 25px;
+  padding: 0 10px;
+  border-radius: 25px;
+  color: #333;
+}
+
+.forgot_password_button {
+  width: calc(100% - 44px);
+  height: 40px;
+  color: #A4DE07;
+  background: #FFF;
+  border: 1px solid #A4DE07;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.fp-sign_in {
+  height: 25px;
+  background: white;
+  color: #A4DE07;
+  border: 1px solid #A4DE07;
+  border-radius: 25px;
+  font-size: 12px;
+}
+.fp-sign_in:hover {
+  color: #333;
+}
+.fp-sign_up {
+  height: 30px;
+  color: white;
+  background-color: #A4DE07;
+  border: none;
+  border-radius: 25px;
+  font-size: 13px;
+}
+.fp-sign_up:hover {
+  color: #333;
+}
+// /* FOrgot Password UI - END*/
